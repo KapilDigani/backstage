@@ -1,0 +1,30 @@
+pipeline:
+  name: Not in main
+  identifier: Not_in_main
+  projectIdentifier: Rohan
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: placeholder
+        identifier: placeholder
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
